@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kennel Fenrir</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f5f0e6;
+        color: #3e3a36;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #e1d7c6;
+        text-align: center;
+        padding: 20px 0;
+    }
+    header img {
+        width: 150px;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+    header h1 {
+        font-size: 2.5em;
+        margin: 0;
+    }
+    nav {
+        background-color: #d8cbb7;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    nav a {
+        color: #3e3a36;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: #8b6b4d;
+    }
+    section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .slideshow-container {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+    }
+    .slides {
+        display: none;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .gallery img {
+        width: 200px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    footer {
+        background-color: #e1d7c6;
+        text-align: center;
+        padding: 20px 0;
+    }
+    form input, form textarea {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    form button {
+        padding: 10px 20px;
+        background-color: #d8cbb7;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    form button:hover {
+        background-color: #c4b29a;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="file_000000003cf471f4a256942f75494f2c" alt="Kennel Fenrir Logo">
+    <h1>Kennel Fenrir</h1>
+</header>
+
+<nav>
+    <a href="#about">Om oss</a>
+    <a href="#dogs">Våra hundar</a>
+    <a href="#puppies">Valpar till salu</a>
+    <a href="#gallery">Galleri</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section id="about">
+    <h2>Om oss</h2>
+    <p>Välkommen till Kennel Fenrir – hem till våra franska bulldogs. Här föder vi upp friska, glada och charmiga valpar med kärlek och omsorg.</p>
+</section>
+
+<section id="dogs">
+    <h2>Våra hundar</h2>
+    <div class="slideshow-container">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Hund1" alt="Hund 1">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Hund2" alt="Hund 2">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Hund3" alt="Hund 3">
+    </div>
+</section>
+
+<section id="puppies">
+    <h2>Valpar till salu</h2>
+    <div class="slideshow-container">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Valp1" alt="Valp 1">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Valp2" alt="Valp 2">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Valp3" alt="Valp 3">
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Galleri</h2>
+    <img src="https://via.placeholder.com/200x200?text=Bild1" alt="Bild1">
+    <img src="https://via.placeholder.com/200x200?text=Bild2" alt="Bild2">
+    <img src="https://via.placeholder.com/200x200?text=Bild3" alt="Bild3">
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <form>
+        <input type="text" name="name" placeholder="Ditt namn" required><br>
+        <input type="email" name="email" placeholder="Din e-post" required><br>
+        <textarea name="message" rows="5" placeholder="Ditt meddelande" required></textarea><br>
+        <button type="submit">Skicka</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 Kennel Fenrir</p>
+</footer>
+
+<script>
+// Slideshow script
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>
