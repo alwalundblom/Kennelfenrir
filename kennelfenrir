@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kennel Fenrir</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body { margin:0; font-family:'Poppins',sans-serif; background-color:#f5f0e6; color:#3e3a36; }
+header { background-color:#e1d7c6; text-align:center; padding:20px 0; }
+header img { width:150px; display:block; margin:0 auto 10px auto; }
+header h1 { font-size:2.5em; margin:0; }
+nav { background-color:#d8cbb7; display:flex; justify-content:center; padding:10px 0; flex-wrap:wrap; }
+nav a { margin:0 15px; text-decoration:none; color:#3e3a36; font-weight:600; }
+nav a:hover { color:#8b6b4d; }
+section { padding:50px 20px; text-align:center; }
+h2 { font-size:2em; margin-bottom:20px; }
+.slideshow-container { max-width:600px; margin:auto; position:relative; }
+.slides { display:none; width:100%; border-radius:10px; }
+.gallery { display:flex; flex-wrap:wrap; justify-content:center; }
+.gallery img { width:200px; margin:10px; border-radius:10px; }
+form input, form textarea { width:80%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
+form button { padding:10px 20px; background-color:#d8cbb7; border:none; border-radius:5px; font-weight:bold; cursor:pointer; }
+form button:hover { background-color:#c4b29a; }
+footer { background-color:#e1d7c6; text-align:center; padding:20px 0; }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://via.placeholder.com/150" alt="Kennel Fenrir Logo">
+    <h1>Kennel Fenrir</h1>
+</header>
+
+<nav>
+    <a href="#home">Startsida</a>
+    <a href="#about">Om oss</a>
+    <a href="#dogs">Våra hundar</a>
+    <a href="#puppies">Valpar</a>
+    <a href="#gallery">Galleri</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section id="home">
+    <h2>Välkommen till Kennel Fenrir</h2>
+    <p>Hem till våra franska bulldogs. Här föder vi upp friska, glada och charmiga valpar med kärlek och omsorg.</p>
+</section>
+
+<section id="about">
+    <h2>Om oss / Avel</h2>
+    <p><strong>Avelsmål och syfte:</strong><br>
+    På Kennel Fenrir är vårt främsta mål att avla fram franska bulldogs som är <strong>friska, sunda och funktionella</strong>. Vi strävar efter att undvika de rastypiska hälsoproblem som ibland ses hos rasen, den så kallade ”sportfrallan”, med längre nos och svans, för att ge våra hundar <strong>bättre förutsättningar för ett aktivt och hälsosamt liv</strong>.<br><br>
+    Vår filosofi är att <strong>hundens välmående alltid kommer först</strong>. Vi lägger stor vikt vid mentalitet, social kompetens och hälsa när vi väljer avelshundar. Genom ansvarsfull och genomtänkt avel vill vi bidra till att rasen utvecklas på ett hållbart sätt, där varje individ har <strong>möjlighet att leva ett långt, lyckligt och aktivt liv</strong>.<br><br>
+    På Kennel Fenrir handlar aveln om <strong>kärlek, omsorg och respekt för hunden</strong>, och vi arbetar noggrant för att varje kull ska ha de bästa förutsättningarna både fysiskt och mentalt.</p>
+</section>
+
+<section id="dogs">
+    <h2>Våra hundar</h2>
+    <div class="slideshow-container">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Hund+1" alt="Hund 1">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Hund+2" alt="Hund 2">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Hund+3" alt="Hund 3">
+    </div>
+</section>
+
+<section id="puppies">
+    <h2>Valpar till salu</h2>
+    <div class="slideshow-container">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Valp+1" alt="Valp 1">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Valp+2" alt="Valp 2">
+        <img class="slides" src="https://via.placeholder.com/600x400?text=Valp+3" alt="Valp 3">
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Galleri</h2>
+    <img src="https://via.placeholder.com/200x200?text=Bild1" alt="Bild1">
+    <img src="https://via.placeholder.com/200x200?text=Bild2" alt="Bild2">
+    <img src="https://via.placeholder.com/200x200?text=Bild3" alt="Bild3">
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <form id="contactForm" action="https://formspree.io/f/mynumber" method="POST">
+        <input type="text" name="name" placeholder="Ditt namn" required><br>
+        <input type="email" name="email" placeholder="Din e-post" required><br>
+        <textarea name="message" rows="5" placeholder="Ditt meddelande" required></textarea><br>
+        <button type="submit">Skicka</button>
+    </form>
+    <p id="thanksMessage" style="display:none; color:#8b6b4d; font-weight:bold;">Tack för ditt meddelande! Vi återkommer snart.</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Kennel Fenrir</p>
+</footer>
+
+<script>
+let slideIndex=0;
+showSlides();
+function showSlides(){
+    let slides=document.getElementsByClassName("slides");
+    for(let i=0;i<slides.length;i++){slides[i].style.display="none";}
+    slideIndex++;
+    if(slideIndex>slides.length){slideIndex=1}
+    slides[slideIndex-1].style.display="block";
+    setTimeout(showSlides,3000);
+}
+
+const form=document.getElementById('contactForm');
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const action=form.action;
+    const data=new FormData(form);
+    fetch(action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(response=>{if(response.ok){form.style.display='none';document.getElementById('thanksMessage').style.display='block';}else{alert('Oj! Något gick fel, försök igen.');}})
+    .catch(error=>{alert('Oj! Något gick fel, försök igen.');});
+});
+</script>
+
+</body>
+</html>
